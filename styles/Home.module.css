@@ -1,0 +1,87 @@
+.overlayContainer {
+  width: 100%;
+  height: 100vh;
+  background: url("/images/hero.jpg");
+}
+
+.contentHolder {
+  background: rgba(0, 0, 0, 0.5);
+  height: 100vh;
+  width: 100%;
+}
+
+.contentHolder nav img {
+  height: 80px;
+  padding: 18px 5px;
+}
+
+.InputContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.InputHeader {
+  color: #fff;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 16px 20px;
+  width: 25%;
+  margin-top: 2px;
+  position: relative;
+}
+
+.InputHeader h2 {
+  color: #fff;
+  margin-bottom: 8px;
+  font-weight: 600;
+  font-size: 32px;
+}
+
+.actionBtn {
+  background: oklch(63.7% 0.237 25.331);
+  width: 100%;
+  margin-top: 40px;
+  cursor: pointer;
+  padding: 8px;
+  border: none;
+  border-radius: 2px;
+  color: #fff;
+  font-weight: 600;
+}
+
+.noti {
+  color: oklch(55.6% 0 0);
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.noti span {
+  color: #fff;
+  cursor: pointer;
+}
+
+.oAuthContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 10px;
+  margin: 20px 0;
+}
+
+.oAuthContainer div {
+  margin: 0 10px;
+  cursor: pointer;
+  font-size: 34px;
+}
+
+@media (max-width: 750px) {
+  .InputHeader {
+    width: 70%;
+  }
+
+  .contentHolder {
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+}
