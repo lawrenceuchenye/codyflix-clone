@@ -41,10 +41,10 @@ export default function Home() {
         email,
         password,
         redirect: false,
-        callbackUrl: "/",
+        callbackUrl: "/profiles",
       });
 
-      router.push("/");
+      router.push("/profiles");
     } catch (err) {
       console.log(err);
     }
@@ -72,10 +72,14 @@ export default function Home() {
                 {variant == "login" ? "Login" : "Register"}
               </button>
               <div className={styles.oAuthContainer}>
-                <div onClick={() => signIn("google", { callbackUrl: "/" })}>
+                <div
+                  onClick={() => signIn("google", { callbackUrl: "/profiles" })}
+                >
                   <FcGoogle />
                 </div>
-                <div onClick={() => signIn("github", { callbackUrl: "/" })}>
+                <div
+                  onClick={() => signIn("github", { callbackUrl: "/profiles" })}
+                >
                   <FaGithub />
                 </div>
               </div>
