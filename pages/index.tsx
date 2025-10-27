@@ -1,8 +1,8 @@
 import Head from "next/head";
 import { getSession, signOut } from "next-auth/react";
 import { NextPageContext } from "next";
-import { redirect } from "next/dist/server/api-utils";
 import useCurrentUser from "@/hook/useCurrentUser";
+import Navbar from "@/components/Navbar";
 
 const index = () => {
   const { data: user } = useCurrentUser();
@@ -23,8 +23,7 @@ const index = () => {
         />
       </Head>
       <div>
-        <h1 style={{ color: "#fff" }}>Logged in as {user?.email}</h1>
-        <button onClick={signOut}>Sign out</button>
+        <Navbar />
       </div>
     </>
   );

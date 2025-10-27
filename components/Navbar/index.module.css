@@ -1,0 +1,61 @@
+.NavContainer {
+  width: 100%;
+  position: fixed;
+}
+
+.NavContentHolder {
+  padding: 6px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  opacity: 0.9;
+  width: 60%;
+  background: oklch(21% 0.006 285.885);
+}
+
+.NavContainer img {
+  height: 80px;
+  padding: 18px 5px;
+}
+
+.NavbarItem p {
+  color: #fff;
+  margin: 0;
+  margin-left: 8px;
+}
+
+.NavItemHolder {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+
+.MobileNavItemPlaceHolder p {
+  color: #fff;
+  margin-left: 8px;
+}
+
+.MobileNavItemPlaceHolder {
+  display: none;
+}
+
+.BsChevron {
+  color: #fff;
+  margin-left: 4px;
+}
+
+@media (max-width: 750px) {
+  .NavItemHolder {
+    display: none;
+  }
+
+  .MobileNavItemPlaceHolder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .NavContentHolder {
+    width: 100%;
+  }
+}
