@@ -1,17 +1,28 @@
 import Head from "next/head";
 import { getSession, signOut } from "next-auth/react";
 import { NextPageContext } from "next";
-import { redirect } from "next/dist/server/api-utils";
 import useCurrentUser from "@/hook/useCurrentUser";
+import styles from "@/styles/Profiles.module.css";
+import { useRouter } from "next/router";
 
 const index = () => {
   const { data: user } = useCurrentUser();
+  const router = useRouter();
 
   return (
     <>
       <div>
-        <h1 style={{ color: "#fff" }}>Profile {user?.email}</h1>
-        <button onClick={signOut}>Sign out</button>
+        <div className={styles.ProfileContainer}>
+          <h1>Who is watching?</h1>
+          <div onClick={() => router.push("/")}>
+            <div className={styles.Profiles}>
+              <div className={styles.Profile}>
+                <img src="/avatar.png" alt="avatar" />
+                <p>{user?.name}</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </>
   );

@@ -30,6 +30,7 @@ export default function Home() {
         password: password,
         email: email,
       });
+      login();
     } catch (err) {
       console.log(err);
     }
