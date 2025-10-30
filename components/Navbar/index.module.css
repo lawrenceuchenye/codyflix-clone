@@ -1,16 +1,23 @@
 .NavContainer {
   width: 100%;
   position: fixed;
+  z-index: 10;
+}
+
+.parentNavContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
 }
 
 .NavContentHolder {
-  padding: 6px 16px;
+  padding: 6px 32px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   opacity: 0.9;
-  width: 60%;
-  background: oklch(21% 0.006 285.885);
+  width: max-content;
 }
 
 .NavContainer img {
@@ -21,7 +28,7 @@
 .NavbarItem p {
   color: #fff;
   margin: 0;
-  margin-left: 8px;
+  margin-left: 16px;
 }
 
 .NavItemHolder {
@@ -44,6 +51,71 @@
   margin-left: 4px;
 }
 
+.MobileMenu {
+  background: #000;
+  color: #fff;
+  height: max-content;
+  text-align: center;
+  display: none;
+  padding: 6px 16px;
+}
+
+.MobileMenu p {
+  margin: 16px 0;
+}
+
+.NavDashboard {
+  color: #fff;
+  padding: 6px 32px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.NavDashboard p {
+  font-size: 24px;
+  margin-left: 20px;
+}
+
+.NavDashboard div {
+  overflow: hidden;
+  margin: 0 8px;
+  margin-right: 0px;
+}
+
+.NavDashboard div img {
+  border-radius: 8px;
+}
+
+.Dashboard {
+  background: #000;
+  width: 250px;
+  position: absolute;
+  padding: 2px 10px;
+  border-radius: 5px;
+  top: 100px;
+  right: 10px;
+}
+
+.Dashboard div {
+  display: flex;
+  align-items: center;
+}
+
+.Dashboard div p {
+  color: #fff;
+  font-size: 16px;
+}
+
+.signOut {
+  padding: 4px;
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
 @media (max-width: 750px) {
   .NavItemHolder {
     display: none;
@@ -57,5 +129,9 @@
 
   .NavContentHolder {
     width: 100%;
+  }
+
+  .MobileMenu {
+    display: block;
   }
 }

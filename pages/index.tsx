@@ -1,11 +1,13 @@
 import Head from "next/head";
 import { getSession, signOut } from "next-auth/react";
 import { NextPageContext } from "next";
-import useCurrentUser from "@/hook/useCurrentUser";
 import Navbar from "@/components/Navbar";
+import Billboard from "@/components/BillBoard";
+import MovieList from "@/components/MovieList";
+import useMovieList from "@/hook/useMovieList";
 
 const index = () => {
-  const { data: user } = useCurrentUser();
+  const { data: movies = [] } = useMovieList();
 
   return (
     <>
@@ -22,9 +24,10 @@ const index = () => {
           referrerpolicy="no-referrer"
         />
       </Head>
-      <div>
-        <Navbar />
-      </div>
+
+      <Navbar />
+      <Billboard />
+      <MovieList title={"Trending Now"} data={movies} />
     </>
   );
 };

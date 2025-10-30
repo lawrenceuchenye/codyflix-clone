@@ -1,0 +1,31 @@
+.movieListContainer {
+  padding: 0 65px;
+  margin-top: 20px;
+  position: relative;
+  z-index: 15;
+}
+
+.mainMovieListContainerHeader {
+  color: #fff;
+  font-size: 28px;
+}
+
+.movieList {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.movieCard img {
+  width: 280px;
+  height: 150px;
+  margin: 20px 5px;
+  object-fit: cover;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: opacity 0.8ms ease-in-out;
+}
+
+.movieCard img:hover {
+  opacity: 0;
+}

@@ -1,0 +1,54 @@
+.Billboard {
+  width: 100%;
+  height: 80vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.Billboard video {
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  object-fit: cover;
+}
+
+.movieInfo {
+  position: absolute;
+  z-index: 10;
+  color: #fff;
+  top: 30%;
+  width: 50%;
+  padding: 0 65px;
+}
+
+.movieInfo h1 {
+  font-size: 65px;
+  margin-bottom: 25px;
+}
+
+.movieInfo p {
+  width: 80%;
+}
+
+.movieInfo button {
+  padding: 10px 20px;
+  background: rgba(255, 255, 255, 0.5);
+  border: none;
+  font-weight: 800;
+  margin-top: 30px;
+  color: #fff;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.movieInfo button:hover {
+  background: rgba(255, 255, 255, 0.6);
+}
+.icon {
+  color: #fff;
+  font-size: 20px;
+  margin-right: 8px;
+  font-weight: 800;
+}
